@@ -1,1 +1,21 @@
-<view></view>
+<!-- 排行榜上面分类 -->
+<view class='rank_nav'>
+  <view 
+    wx:for="{{type}}" 
+    class='{{activeType==index?"main_nav_active ":""}}'
+    wx:key="{{index}}"
+    bind:tap='typeItemTap'
+    data-index="{{index}}"
+    >{{item.title}}</view>
+</view>
+<!-- 排行榜左面分类 -->
+<view class='left_nav'>
+  <view 
+    data-index="{{index}}"
+    wx:for="{{list}}" 
+    wx:key="{{index}}"
+    class='{{activeMinor==index?"left-nav_active":""}}'
+    bind:tap="minorItemTap"
+    data-id="item._id"
+    >{{item.shortTitle}}</view>
+</view>

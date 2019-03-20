@@ -1,0 +1,36 @@
+.rank_nav{
+  width:750rpx;
+  display: flex;
+  text-align: center;
+  border-bottom:1px solid #DCDFE6;
+}
+.rank_nav view{
+  width:50%;
+  font:14px/30px "微软雅黑";
+  color:#606266;
+}
+.rank_nav .line{
+  width:1px;
+  height:20px;
+  background-color:#DCDFE6;
+  margin-top:5px;
+} 
+.main_nav_active{
+  border-bottom:2px solid #f00;
+  /* width: 50%; */
+}
+.left_nav{
+  width:180rpx;
+ text-align: center;
+ background-color:#E4E7ED;
+ height:100%；
+}
+.left_nav view{
+  font:16px/50px "微软雅黑";
+  color:#606266;
+  height:50px;
+}
+.left_nav .left-nav_active{
+  color:#f00;
+  background-color:#fff;
+}

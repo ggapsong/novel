@@ -14,7 +14,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "首页",
+    "navigationBarTitleText": "novel",
     "navigationBarTextStyle":"black",
     "backgroundColor":"#ccc,"
   },

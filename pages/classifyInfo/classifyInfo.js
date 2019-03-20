@@ -10,7 +10,7 @@ Page({
       { title: "好评", code: "reputation" },
       { title: "完结", code: "over" }
     ],
-    minor:["全部"],
+    minor:["全部"], 
     activeType:0,
     activeMinor:0,
     page:1,
