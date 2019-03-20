@@ -1,0 +1,47 @@
+
+  <view class='container'>
+  <!-- 分类 -->
+    <scroll-view scroll-x style=''>
+      <view class='scroll-box'>
+        <view bind:tap='typeItemTap' data-index="{{index}}" wx:for="{{type}}" wx:key="{{index}}" class='scroll-item {{activeType==index?"active":""}}'>
+          {{item.title}}
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-x style=''>
+      <view class='scroll-box'>
+        <view bind:tap="minorItemTap" data-index="{{index}}" wx:for="{{minor}}" wx:key="{{index}}" class='scroll-item {{activeMinor==index?"active":""}}'>
+          {{item}}
+        </view>
+      </view>
+    </scroll-view>
+  <!-- 详细信息 -->
+    <view 
+      class='item-detail' 
+      wx:for="{{books}}" 
+      wx:key="{{index}}" data-id="{{item._id}}"
+      bind:tap="getItemDetailInfo"
+      
+      >
+      <view class='img_box'>
+        <image mode="widthFix" src="{{'http://statics.zhuishushenqi.com'+item.cover}}"></image>
+      </view>
+      <view class='detail_box'>
+        <view class='title'>{{item.title}}</view>
+        <view class='author_detail'>
+          <text>{{item.author}} |</text>
+          <text>{{item.majorCate}}</text>
+        </view>
+        <view class='describe'>{{item.shortIntro}}</view>
+        <view class='Popularity'>
+          <view class='people'>
+            <text>1.1万</text>人气
+          </view>
+          <view><text>62.83%</text>读者留存</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+<scroll-view scroll-y="true" bindscrolltolower="lower" lower-threshold="50px" style='100%'>
+</scroll-view>

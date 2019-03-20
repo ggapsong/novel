@@ -1,0 +1,81 @@
+.scroll-box{
+  display: inline-block;
+  padding: 0 10px;
+  min-width: 750rpx;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border-bottom: 1px solid #E4E7ED;
+}
+.scroll-item{
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 30px;
+  font-size: 12px;
+}
+.active{
+  color:red;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.item-detail{
+  padding-left:10px;
+  display: flex;
+  padding-top:10px;
+  border-bottom:1px solid #e3ded8;
+  height:207rpx;
+  width:100%;
+}
+.img_box{
+  margin-right:20px;
+  vertical-align: top;
+}
+.img_box image{
+  width:130rpx;
+  /* height:110rpx; */
+  vertical-align: top;
+}
+.detail_box{
+  width:600rpx;
+}
+.detail_box .title{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+   width:580rpx;
+  font-size:16px;
+  line-height: 20px;
+  color:#3a352f;
+}
+.author_detail text{
+  font:14px/16px "微软雅黑";
+  color:#97928f;
+} 
+.describe{
+  font:14px/20px "微软雅黑";
+  color:#97928f;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width:580rpx;
+}
+.Popularity{
+  display: flex;
+}
+.Popularity .people{
+  border-right:1px solid #000;
+}
+.Popularity view:nth-of-type(1){
+   padding-left:0;
+}
+.Popularity view{
+  font:14px/16px "微软雅黑";
+  color:#524d4a;
+  padding-right:10px;
+  padding-left:10px;
+}
+.Popularity text{
+  color:#aa3333;
+}

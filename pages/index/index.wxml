@@ -1,0 +1,39 @@
+<!--index.wxml-->
+
+<view class="container" bind:tap="bigTap">
+    <!-- 女生 -->
+    <view class='title'>女生</view>
+    <view class='list'>
+      <view class='item' bind:tap='jumpClassifyInfoPage' data-gender="female" data-major="{{item.name}}" wx:for="{{female}}" wx:key="index">
+        <view class='classify'>{{item.name}}</view>
+        <view class='num'>{{item.bookCount}}本</view>
+      </view>
+    </view>
+    <!-- 男生 -->
+    <view class='title'>男生</view>
+    <view class='list'>
+      <view class='item' bind:tap='jumpClassifyInfoPage' data-gender="male" data-major="{{item.name}}" wx:for="{{male}}" wx:key="index">
+        <view class='classify'>{{item.name}}</view>
+        <view class='num'>{{item.bookCount}}本</view>
+      </view>
+    </view>
+    <!-- 漫画 -->
+    <view class='title'>漫画</view>
+    <view class='list'>
+      <view class='item' bind:tap='jumpClassifyInfoPage' data-gender="picture" data-major="{{item.name}}" wx:for="{{picture}}" wx:key="index">
+        <view class='classify'>{{item.name}}</view>
+        <view class='num'>{{item.bookCount}}本</view>
+      </view>
+    </view>
+    <!-- 出版 -->
+    <view class='title'>出版</view>
+    <view class='list'>
+      <view class='item' bind:tap='jumpClassifyInfoPage' data-gender="press" data-major="{{item.name}}" wx:for="{{picture}}" wx:key="index">
+        <view class='classify'>{{item.name}}</view>
+        <view class='num'>{{item.bookCount}}本</view>
+      </view>
+    </view>
+</view>
+ 
+
+
