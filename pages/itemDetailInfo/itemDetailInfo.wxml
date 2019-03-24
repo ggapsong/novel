@@ -48,7 +48,7 @@
       <text class='info' wx:for="{{datas.tags}}" wx:key="{{index}}">{{item}}</text>
     </view>
   </view>
-  <view class='footer'>
+  <view class='footer' bind:tap="readstart" data-id="{{datas._id}}">
     开始阅读
   </view>
 </view>

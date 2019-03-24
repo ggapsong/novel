@@ -1,0 +1,68 @@
+<!--pages/bookList/bookList.wxml-->
+<!-- 书单详情 -->
+
+<!-- 作者详情 -->
+<view class='author_wrap'>
+<!-- 图片 -->
+  <view class='img_name'>
+    <view class='img_box'>
+      <image src="{{'https://statics.zhuishushenqi.com'+author.avatar}}"></image>
+    </view>
+    <!-- 作者名 -->
+    <view class='author_box'>
+      <view class='author_name'>
+        {{author.nickname}}
+      </view>
+      <view class='time'>3个小时前</view>
+    </view>  
+  </view>
+  <view class='description'>
+    {{title}}
+  </view>
+  <!-- 简介 -->
+  <view class='brif_intro'>
+    {{desc}}
+  </view>
+  <!-- 创建自 -->
+  <view class='bottom_img_name'>
+    <view class='img_box'>
+      <image src="{{'https://statics.zhuishushenqi.com'+author.avatar}}"></image>
+    </view>
+    <!-- 作者名 -->
+    <view class='author_name'>
+        <view>创建自</view> {{author.nickname}}
+    </view>
+  </view>
+</view>
+<!-- 每一部书的详情 -->
+<view 
+  class='item_detail_box' 
+  wx:for="{{bookLists}}" 
+  wx:key="{{index}}" 
+  data-id="{{item.book._id}}"
+  bind:tap="getItemDetailInfo"
+>
+  <view class='header'>
+    <view class='img_box'>
+      <image src="{{'https://statics.zhuishushenqi.com'+item.book.cover}}"></image>
+    </view>
+    <view>
+      <view class='item_title'>
+        {{item.book.title}}
+      </view>
+      <view class='item-info'>
+        <view>{{item.book.author}} |</view>
+        <view>{{item.book.cat}} |</view>
+        <view class='red'>
+          <text>{{item.book.latelyFollower}}</text> 人气
+        </view>
+      </view>
+    </view>
+   
+  </view>
+  <view class='comment'>
+    {{item.comment}}
+  </view>
+</view> 
+
+<view class='foot'>到底拉...</view>

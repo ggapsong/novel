@@ -13,7 +13,6 @@ Page({
     wx.request({
       url: 'https://api.zhuishushenqi.com/book/'+id,
       success: function(res) {
-        console.log(res.data)
         _this.setData({
           datas:res.data
         })
@@ -22,5 +21,10 @@ Page({
       fail: function(res) {},
     })
   },
-
+  readstart(event){
+    var data = event.target.dataset;
+    wx.navigateTo({
+      url: '/pages/readstart/readstart?id='+data.id,
+    })
+  }
 })

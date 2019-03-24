@@ -1,0 +1,128 @@
+/* pages/bookList/bookList.wxss */
+page{
+  background-color: #f5f2ed;
+}
+.author_wrap{
+  width:750rpx;
+  padding-left:20px;
+  border-bottom:1px solid #d0d0d0;
+  background-color: #fff;
+} 
+ .img_name{
+    display: flex;
+    padding-top:20px;
+  }
+  .img_box{
+    padding-right: 20px;
+  }
+  .img_box image{
+    width:60px;
+    height:60px
+  }
+  .author_name{
+    font:14px/18px "微软雅黑";
+    color:#ab9a66;
+  }
+  .time{
+    font:12px/16px "微软雅黑";
+    color:#9a9a9a;
+  }
+  .description{
+    font:14px/30px "微软雅黑";
+    color:#242424;
+    font-weight: bold;
+  }
+  .brif_intro{
+    padding-top:5px;
+    font:14px/20px "微软雅黑";
+    color:#a6a6a6;
+    width:660rpx;
+  }
+  .bottom_img_name{
+    padding-bottom:10px;
+    display: flex;
+    padding-top:10px;
+    align-items: center;
+  }
+  .bottom_img_name .img_box{
+    width:100rpx;
+    height:100rpx;
+    border-radius: 50%;
+    /* margin-right:10px; */
+  }
+  .img_box image{
+    width:60px;
+    height:60px;
+  }
+  .author_name {
+    font:14px/20px "微软雅黑";
+    color:#ab9a66; 
+  }
+  .author_name view{
+    color:#a6a6a6;
+    text-indent: 5px;
+    display: inline-block;
+  }
+/* 每一部书的详情 */
+  .item_detail_box{
+    background-color: #fff;
+    margin-top:10px;
+    width: 750rpx;
+    box-sizing: border-box;
+    border-top:1px solid #d0d0d0;
+  }
+  .header{
+    display: flex;
+    padding-bottom:20rpx;
+    border-bottom:1px solid #d0d0d0;
+    padding-top:10px;
+    margin-left:10px;
+  }
+  .img_box{
+    width:100rpx;
+    height:100rpx;
+    padding-right:20rpx;
+  }
+  .img_box image{
+    width:100rpx;
+    height:100rpx;
+  }
+  .item_title{
+    font:14px/20px "微软雅黑";
+    color:#242424;
+    font-weight: bold;
+  }
+  .item-info{
+    font:14px/16px "微软雅黑";
+    color:#a6a6a6;
+    display: flex;
+    padding-top:5rpx;
+  }
+  .item-info view{
+    padding-right:5px;
+  }
+  .item-info .red{
+    color:#c5281f;
+  }
+  .red text{
+    color:#a6a6a6;
+  }
+  .comment{
+    padding-top:10px;
+    font:14px/20px "微软雅黑";
+    color:#a6a6a6;
+    width:660rpx;
+     overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    padding-bottom: 10rpx;
+    padding-left:20px;
+    
+  }
+  .foot{
+    font:14px/50px "微软雅黑";
+    color:#606266;
+    text-align: center;
+  }

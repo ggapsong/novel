@@ -1,0 +1,56 @@
+<!--pages/readstart/readstart.wxml-->
+<scroll-view scroll-y class='content' bind:tap="showAll" scroll-top="{{scrollTop}}"> 
+  <text>{{chapterContent.chapter.cpContent}}</text>
+  <view class="change-chapter-box">
+    <view class='change-chapter' catchtap='preChapter'>上一章</view>
+    <view class='change-chapter' catchtap='nextChapter'>下一章</view>
+  </view>
+</scroll-view>
+<view class='footer' style="{{'bottom:'+(footerShow?'0rpx':'-120rpx')}}">
+  <view class='catalog'>
+    <view class='parent'>
+      <image src='/asset/img/content.png'></image>
+      <view class='descrption'>目录</view>
+    </view>
+  </view>
+  <view class='catalog' bind:tap="childShow">
+    <view class='parent'>
+      <image src='/asset/img/num.png'></image>
+      <view class='descrption'>字体</view>
+    </view>
+    <view class='child {{isShow?"show":"hidden"}}' catchtap="()=>{}">
+    <!-- 字号 -->
+      <view class='font_size_box'>
+        <view class='font_detail'>字号</view>
+        <view class='big_small_box'>
+          <view class='big'>大</view>
+          <view class='small'>小</view>
+        </view>
+      </view>
+    <!-- 背景 -->
+    <view class='background_box'>
+      <view class='bgckground'>背景</view>
+      <view class='bg_detail_box'>
+        <view></view>
+        <view></view>
+        <view></view>
+        <view></view>
+        <view></view>
+        <view></view>
+      </view>
+    </view>
+    </view>
+  </view>
+  <view class='catalog'>
+    <view class='parent'>
+      <image src='/asset/img/moon.png'></image>
+      <view class='descrption'>夜间</view>
+    </view>
+  </view>
+  <view class='catalog' bind:tap="changeSource">
+    <view class='parent'>
+      <image src='/asset/img/moon.png'></image>
+      <view class='descrption'>换源</view>
+    </view>
+  </view>
+</view>

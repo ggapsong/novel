@@ -2,20 +2,53 @@
 <view class='rank_nav'>
   <view 
     wx:for="{{type}}" 
-    class='{{activeType==index?"main_nav_active ":""}}'
+    class='{{show==item.code?"main_nav_active":""}}'
     wx:key="{{index}}"
     bind:tap='typeItemTap'
-    data-index="{{index}}"
+    data-show="{{item.code}}"
     >{{item.title}}</view>
 </view>
 <!-- 排行榜左面分类 -->
-<view class='left_nav'>
-  <view 
-    data-index="{{index}}"
-    wx:for="{{list}}" 
-    wx:key="{{index}}"
-    class='{{activeMinor==index?"left-nav_active":""}}'
-    bind:tap="minorItemTap"
-    data-id="item._id"
-    >{{item.shortTitle}}</view>
+<view class='content'>  
+<!-- 左边导航 -->
+  <scroll-view scroll-y="true">
+     <view class='left_nav'>
+        <view 
+          data-index="{{index}}"
+          wx:for="{{data[show]}}" 
+          wx:key="{{index}}"
+          class='{{activeMinor==index?"left-nav_active":""}}'
+          bind:tap="minorItemTap"
+          data-id="{{item._id}}"
+        >{{item.shortTitle}}
+        </view>
+    </view>
+  </scroll-view>
+  <!-- 右边内容 -->
+  <scroll-view scroll-y="true">
+     <view 
+      class='item-detail' 
+      wx:for="{{books}}" 
+      wx:key="{{index}}" data-id="{{item._id}}"
+      bind:tap="getItemDetailInfo"
+      >
+      <view class='img_box'>
+        <image mode="widthFix" src="{{'http://statics.zhuishushenqi.com'+item.cover}}"></image>
+      </view>
+      <view class='detail_box'>
+        <view class='title'>{{item.title}}</view>
+        <view class='author_detail'>
+          <text>{{item.author}} |</text>
+          <text>{{item.majorCate}}</text>
+        </view>
+        <view class='describe'>{{item.shortIntro}}</view>
+        <view class='Popularity'>
+          <view class='people'>
+            <text>1.1万</text>人气
+          </view>
+          <view><text>62.83%</text>读者留存</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
 </view>

@@ -1,6 +1,6 @@
 .scroll-box{
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 10rpx;
   min-width: 750rpx;
   box-sizing: border-box;
   white-space: nowrap;
@@ -8,7 +8,7 @@
 }
 .scroll-item{
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 10rpx;
   line-height: 30px;
   font-size: 12px;
 }
@@ -21,20 +21,19 @@
   color: transparent;
 }
 .item-detail{
-  padding-left:10px;
+  padding-left:10rpx;
   display: flex;
-  padding-top:10px;
+  padding-top:20rpx;
   border-bottom:1px solid #e3ded8;
-  height:207rpx;
+  padding-bottom:20rpx;
   width:100%;
 }
 .img_box{
-  margin-right:20px;
+  margin-right:20rpx;
   vertical-align: top;
 }
 .img_box image{
   width:130rpx;
-  /* height:110rpx; */
   vertical-align: top;
 }
 .detail_box{
@@ -48,6 +47,8 @@
   font-size:16px;
   line-height: 20px;
   color:#3a352f;
+}
+.author_detail {
 }
 .author_detail text{
   font:14px/16px "微软雅黑";
@@ -63,6 +64,7 @@
 }
 .Popularity{
   display: flex;
+  padding-top:8rpx;
 }
 .Popularity .people{
   border-right:1px solid #000;
@@ -73,9 +75,14 @@
 .Popularity view{
   font:14px/16px "微软雅黑";
   color:#524d4a;
-  padding-right:10px;
-  padding-left:10px;
+  padding-right:10rpx;
+  padding-left:10rpx;
 }
 .Popularity text{
   color:#aa3333;
+}
+.loading-box{
+  height: 20px;
+  line-height: 30px;
+  text-align: center;
 }

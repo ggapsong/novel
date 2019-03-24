@@ -15,7 +15,8 @@ Page({
     activeMinor:0,
     page:1,
     limit:20,
-    books:[]
+    books:[],
+    loading:false
   },
 
   /**
@@ -67,6 +68,9 @@ Page({
 
   },
   getData(){
+    this.setData({
+      loading: true
+    });
     let _this = this;
     let minor = this.data.minor[this.data.activeMinor] == "全部" ? "" : this.data.minor[this.data.activeMinor];
     wx.request({
@@ -74,7 +78,8 @@ Page({
       success(res){
         _this.setData({
           page:_this.data.page+1,
-          books: [..._this.data.books, ...res.data.books]
+          books: [..._this.data.books, ...res.data.books],
+          loading: false
         })
         wx.hideLoading()
       }
@@ -87,7 +92,11 @@ Page({
       url: '/pages/itemDetailInfo/itemDetailInfo?id='+id,
     });
   },
-  lower(){
-    console.log(11111)
+  lower(e){
+    if(this.data.loading){
+      return false;
+    };
+    
+    this.getData();
   }
 })

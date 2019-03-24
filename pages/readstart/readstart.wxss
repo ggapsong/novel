@@ -1,0 +1,147 @@
+/* pages/readstart/readstart.wxss */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.header{
+  height:100rpx;
+  width:750rpx;
+  background-color: #ccc;
+  }
+  .content{
+    height:100vh;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  .footer{
+    height:120rpx;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:-120rpx;
+    display: flex;
+    justify-content: space-around;
+    background-color:#040505;
+  }
+  .catalog{
+    text-align: center;
+    font-size: 0;
+    padding: 0 10px;
+  }
+  .catalog image{
+    width: 50rpx;
+    height:50rpx;
+    padding-top:5rpx;
+    vertical-align: top;
+  }
+  .catalog .descrption{
+    font:16px/30px "微软雅黑";
+    color:#ccc;
+  }
+  .catalog .num{
+    width:60rpx;
+    height:50rpx;
+  }
+  .child{
+    height:100px;
+    background-color:rgba(0,0,0,0.8);
+    position: absolute;
+    bottom:120rpx;
+    left:0;
+    right:0;
+    display: none;
+  }
+  .show{
+    display: block;
+  }
+  .hidden{
+    display: none;
+  }
+  .font_size_box{
+    padding-left:20rpx;
+    display: flex;
+    padding-top:40rpx;
+  }
+  .font_detail{
+    font:16px/30px "微软雅黑";
+    color:#fff;
+    padding-right:50rpx;
+  }
+  .big_small_box{
+    display: flex;padding:0 8rpx;
+  }
+  .big{
+    border:1px solid #fff;
+    padding:0 50rpx;
+    border-radius:10px;
+    font: 14px/24px "微软雅黑";
+    color:#fff;
+    margin-right:30rpx;
+  }
+  .small{
+    border:1px solid #fff;
+    padding:0 50rpx;
+    font: 14px/24px "微软雅黑";
+    color:#fff;
+    border-radius: 10px;
+  }
+  .background_box{
+    padding-left:20rpx;
+    display: flex;
+    padding-top:27rpx;
+  }
+  .bgckground{
+    font:16px/30px "微软雅黑";
+    color:#fff;
+    padding-right:50rpx;
+  }
+  .bg_detail_box{
+    display: flex;
+  }
+  .bg_detail_box view{
+    margin-right:15rpx;
+    padding:14px;
+    border:1px solid #fff;
+    border-radius: 50%;
+    background-color: #000;
+  }
+  .bg_detail_box view:nth-of-type(1){
+    background-color:#f7efe5;
+  }
+  .bg_detail_box view:nth-of-type(2){
+    background-color:#e9dfc8;
+  }
+  .bg_detail_box view:nth-of-type(3){
+    background-color:#a5a5a4;
+  }
+  .bg_detail_box view:nth-of-type(4){
+    background-color:#cdf1cd;
+  }
+  .bg_detail_box view:nth-of-type(5){
+    background-color:#253347;
+  }
+  .bg_detail_box view:nth-of-type(6){
+    background-color:#0e1410;
+  }
+  .showOpcity{
+    opacity: 1;
+  }
+  .hideOpcity{
+    opacity: 0;
+  }
+.change-chapter-box{
+  height: 40rpx;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.change-chapter{
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  line-height: 24px;
+  padding: 0 10px;
+  border-radius: 4px;
+}
